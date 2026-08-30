@@ -21,7 +21,6 @@
 
         <form id="submissionForm">
 
-            <!-- FULL NAME & PREFERRED NAME -->
             <div class="form-group two-col">
                 <div>
                     <label for="fullName">Full Name <span>*</span></label>
@@ -33,14 +32,12 @@
                 </div>
             </div>
 
-            <!-- SCHOOL -->
             <div class="form-group">
                 <label for="school">Current / Most Recent School</label>
                 <input type="text" id="school" name="school" placeholder="e.g. Saigon South International School">
                 <p class="file-hint">Please enter full school names rather than abbreviations.</p>
             </div>
 
-            <!-- GRADE & COUNTRY -->
             <div class="form-group two-col">
                 <div>
                     <label for="grade">Grade Level <span>*</span></label>
@@ -69,7 +66,6 @@
                 </div>
             </div>
 
-            <!-- ORIGIN -->
             <div class="form-group">
                 <label for="origin">Country of Origin <span>*</span></label>
                 <select id="origin" name="origin" multiple required style="height: 100px;">
@@ -84,7 +80,6 @@
                 <p class="file-hint">Hold Ctrl (Windows) or Command (Mac) to select multiple.</p>
             </div>
 
-            <!-- TOPICS -->
             <div class="form-group">
                 <label>Topics of Interest <span>*</span></label>
                 <p class="file-hint" style="margin-bottom: 10px;">Select all that apply:</p>
@@ -102,7 +97,6 @@
                 </div>
             </div>
 
-            <!-- HOW DID YOU HEAR -->
             <div class="form-group">
                 <label for="howHeard">How Did You Hear About Us?</label>
                 <select id="howHeard" name="howHeard">
@@ -115,7 +109,6 @@
                 </select>
             </div>
 
-            <!-- ARTICLE TITLE & CONTENT -->
             <div class="form-group">
                 <label for="articleTitle">Article Title <span>*</span></label>
                 <input type="text" id="articleTitle" name="articleTitle" placeholder="Enter article title" required>
@@ -132,7 +125,6 @@
                 <textarea id="article" name="article" rows="6" placeholder="Paste full article text or a summary..."></textarea>
             </div>
 
-            <!-- SUBMIT BUTTON & STATUS -->
             <button type="submit" class="submit-btn">Submit Article</button>
             <div id="statusMsg" class="status-msg"></div>
 
@@ -140,7 +132,6 @@
 
     </div>
 
-    <!-- ES MODULE SCRIPT LINK FOR FIREBASE V10 SDK -->
     <script type="module" src="submit.js"></script>
 
 </body>
