@@ -358,9 +358,20 @@
                     name="article"
                     rows="15"
                     placeholder="Write your article here..."
-                    required
                 ></textarea>
 
+            </div>
+
+            <div class="question">
+                <label for="articleFile">
+                    Upload Article (PDF/Word) <span>*</span>
+                </label>
+                <input 
+                    type="file" 
+                    id="articleFile" 
+                    accept=".pdf,.doc,.docx"
+                    required
+                >
             </div>
 
             <button type="submit" class="submit-button">
@@ -373,7 +384,6 @@
     </div>
 
 
-    <script src="submit.js"></script>
-
+<script type="module" src="submit.js"></script>
 </body>
 </html>
