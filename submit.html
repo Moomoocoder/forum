@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Submit an Article</title>
+
     <link rel="stylesheet" href="submit.css">
 </head>
 
@@ -19,12 +21,17 @@
             to submit your article for review.
         </p>
 
+
         <form id="submissionForm">
+
+
+            <!-- FULL NAME -->
 
             <div class="question">
                 <label for="fullName">
                     What is your full name? <span>*</span>
                 </label>
+
                 <input
                     type="text"
                     id="fullName"
@@ -33,10 +40,14 @@
                 >
             </div>
 
+
+            <!-- PREFERRED NAME -->
+
             <div class="question">
                 <label for="preferredName">
                     What is your preferred name? <span>*</span>
                 </label>
+
                 <input
                     type="text"
                     id="preferredName"
@@ -45,14 +56,19 @@
                 >
             </div>
 
+
+            <!-- SCHOOL -->
+
             <div class="question">
                 <label for="school">
                     What is the name of your current/most recent school?
                 </label>
+
                 <p class="description">
                     Please enter the full name (Saigon South International School
                     instead of SSIS).
                 </p>
+
                 <input
                     type="text"
                     id="school"
@@ -60,10 +76,14 @@
                 >
             </div>
 
+
+            <!-- GRADE -->
+
             <div class="question">
                 <label for="grade">
                     What grade are you in? <span>*</span>
                 </label>
+
                 <select id="grade" name="grade" required>
                     <option value="">Select your grade</option>
                     <option value="9">Grade 9</option>
@@ -74,12 +94,18 @@
                 </select>
             </div>
 
+
+            <!-- CURRENT COUNTRY -->
+
             <div class="question">
                 <label for="currentCountry">
-                    In which country do you currently go to school? <span>*</span>
+                    In which country do you currently go to school?
+                    <span>*</span>
                 </label>
+
                 <select id="currentCountry" name="currentCountry" required>
                     <option value="">Select a country</option>
+
                     <option>Afghanistan</option>
                     <option>Albania</option>
                     <option>Algeria</option>
@@ -121,14 +147,24 @@
                     <option>United States</option>
                     <option>Vietnam</option>
                     <option>Other</option>
+
                 </select>
             </div>
+
+
+            <!-- ORIGIN -->
 
             <div class="question">
                 <label for="origin">
                     Which country(ies) are you from? <span>*</span>
                 </label>
-                <select id="origin" name="origin" multiple required>
+
+                <select
+                    id="origin"
+                    name="origin"
+                    multiple
+                    required
+                >
                     <option>Afghanistan</option>
                     <option>Albania</option>
                     <option>Algeria</option>
@@ -171,46 +207,131 @@
                     <option>Vietnam</option>
                     <option>Other</option>
                 </select>
+
                 <p class="description">
                     Hold Ctrl (Windows) or Command (Mac) to select multiple countries.
                 </p>
             </div>
 
+
+            <!-- TOPICS -->
+
             <div class="question">
-                <p class="question-label">
-                    Which topic area are you most interested in? [Pick as many as you'd like] <span>*</span>
-                </p>
+
+                <label>
+                    Which topic area are you most interested in?
+                    [Pick as many as you'd like] <span>*</span>
+                </label>
+
                 <p class="description">
                     This is just to see what you are interested in; it does not mean
                     you have to write about the topics which you have picked.
                 </p>
+
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="topics" value="Astronomy"> Astronomy</label>
-                    <label><input type="checkbox" name="topics" value="Artificial Intelligence"> Artificial Intelligence</label>
-                    <label><input type="checkbox" name="topics" value="Biology"> Biology</label>
-                    <label><input type="checkbox" name="topics" value="Chemistry"> Chemistry</label>
-                    <label><input type="checkbox" name="topics" value="Computer Science"> Computer Science</label>
-                    <label><input type="checkbox" name="topics" value="Data Science"> Data Science</label>
-                    <label><input type="checkbox" name="topics" value="Engineering"> Engineering</label>
-                    <label><input type="checkbox" name="topics" value="Environmental Science"> Environmental Science</label>
-                    <label><input type="checkbox" name="topics" value="Geology"> Geology</label>
-                    <label><input type="checkbox" name="topics" value="Mathematics"> Mathematics</label>
-                    <label><input type="checkbox" name="topics" value="Medicine & Public Health"> Medicine & Public Health</label>
-                    <label><input type="checkbox" name="topics" value="Neuroscience & Neurobiology"> Neuroscience & Neurobiology</label>
-                    <label><input type="checkbox" name="topics" value="Physics & Astrophysics"> Physics & Astrophysics</label>
-                    <label><input type="checkbox" name="topics" value="Psychology"> Psychology</label>
-                    <label><input type="checkbox" name="topics" value="Robotics"> Robotics</label>
-                    <label><input type="checkbox" name="topics" value="Zoology"> Zoology</label>
-                    <label><input type="checkbox" name="topics" value="Other"> Other</label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Astronomy">
+                        Astronomy
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Artificial Intelligence">
+                        Artificial Intelligence
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Biology">
+                        Biology
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Chemistry">
+                        Chemistry
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Computer Science">
+                        Computer Science
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Data Science">
+                        Data Science
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Engineering">
+                        Engineering
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Environmental Science">
+                        Environmental Science
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Geology">
+                        Geology
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Mathematics">
+                        Mathematics
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Medicine & Public Health">
+                        Medicine & Public Health
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Neuroscience & Neurobiology">
+                        Neuroscience & Neurobiology
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Physics & Astrophysics">
+                        Physics & Astrophysics
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Psychology">
+                        Psychology
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Robotics">
+                        Robotics
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Zoology">
+                        Zoology
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="topics" value="Other">
+                        Other
+                    </label>
+
                 </div>
+
             </div>
 
+
+            <!-- HOW DID YOU HEAR -->
+
             <div class="question">
+
                 <label for="howHeard">
                     How did you hear about Catalyst?
                 </label>
+
                 <select id="howHeard" name="howHeard">
+
                     <option value="">Select an option</option>
+
                     <option>Friend or classmate</option>
                     <option>Teacher</option>
                     <option>School</option>
@@ -218,53 +339,60 @@
                     <option>Search engine</option>
                     <option>Website</option>
                     <option>Other</option>
+
                 </select>
+
             </div>
 
+
+            <!-- ARTICLE -->
+
             <div class="question">
+
                 <label for="articleTitle">
                     What is the title of your article? <span>*</span>
                 </label>
+
                 <input
                     type="text"
                     id="articleTitle"
                     name="articleTitle"
                     required
                 >
+
             </div>
 
+
             <div class="question">
+
                 <label for="article">
                     Please submit your article <span>*</span>
                 </label>
+
                 <textarea
                     id="article"
                     name="article"
                     rows="15"
                     placeholder="Write your article here..."
+                    required
                 ></textarea>
+
             </div>
 
-            <div class="question">
-                <label for="articleFile">
-                    Upload Article (PDF/Word)
-                </label>
-                <input 
-                    type="file" 
-                    id="articleFile" 
-                    name="articleFile"
-                    accept=".pdf,.doc,.docx"
-                >
-            </div>
+
+            <!-- SUBMIT -->
 
             <button type="submit" class="submit-button">
                 Submit Article
             </button>
 
+
         </form>
 
     </div>
 
-    <script type="module" src="submit.js"></script>
+
+    <script src="submit.js"></script>
+
 </body>
 </html>
