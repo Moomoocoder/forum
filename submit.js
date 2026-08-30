@@ -13,21 +13,18 @@ const db = getFirestore(app);
 
 const form = document.getElementById("submissionForm");
 
-form.addEventListener("submit", async function(e) {
-  e.preventDefault();
+form.addEventListener("submit", async function(e) {e.preventDefault();
 
   const topics = [];
 
   document.querySelectorAll('input[name="topics"]:checked').forEach(function(box) {
-    topics.push(box.value);
-  });
+    topics.push(box.value);});
 
   const origins = [];
   const originOptions = document.getElementById("origin").selectedOptions;
 
   for (let i = 0; i < originOptions.length; i++) {
-    origins.push(originOptions[i].value);
-  }
+    origins.push(originOptions[i].value);}
 
   const data = {
     fullName: document.getElementById("fullName").value,
@@ -41,8 +38,7 @@ form.addEventListener("submit", async function(e) {
     articleLink: document.getElementById("Link").value,
     articleText: document.getElementById("article").value,
     topics: topics,
-    submittedAt: new Date()
-  };
+    submittedAt: new Date()};
 
   try {
     await addDoc(collection(db, "submissions"), data);
@@ -52,5 +48,4 @@ form.addEventListener("submit", async function(e) {
   } catch (error) {
     console.log(error);
     alert("There was an error submitting the article.");
-  }
-});
+  }});
