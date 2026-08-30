@@ -15,13 +15,14 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
   e.preventDefault();
 
   try {
-const selectedTopics = Array.from(document.querySelectorAll('input[name="topics"]:checked')).map(function(cb) {
-  return cb.value;
-});
+    const selectedTopics = Array.from(document.querySelectorAll('input[name="topics"]:checked')).map(function(cb) {
+      return cb.value;
+    });
 
-const selectedOrigins = Array.from(document.getElementById('origin').selectedOptions).map(function(opt) {
-  return opt.value;
-});
+    const selectedOrigins = Array.from(document.getElementById('origin').selectedOptions).map(function(opt) {
+      return opt.value;
+    });
+
     await addDoc(collection(db, "submissions"), {
       fullName: document.getElementById('fullName').value,
       preferredName: document.getElementById('preferredName').value,
@@ -40,9 +41,8 @@ const selectedOrigins = Array.from(document.getElementById('origin').selectedOpt
     alert("Article submitted successfully!");
     document.getElementById('submissionForm').reset();
 
-  }} catch (error) {
-  console.log(error);
-  alert("Something went wrong");
-}
-
+  } catch (error) {
+    console.error("Error submitting form: ", error);
+    alert("Something went wrong: " + error.message);
+  }
 });
