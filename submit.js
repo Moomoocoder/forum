@@ -15,9 +15,13 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
   e.preventDefault();
 
   try {
-    const selectedTopics = Array.from(document.querySelectorAll('input[name="topics"]:checked')).map(cb => cb.value);
-    const selectedOrigins = Array.from(document.getElementById('origin').selectedOptions).map(opt => opt.value);
+const selectedTopics = Array.from(document.querySelectorAll('input[name="topics"]:checked')).map(function(cb) {
+  return cb.value;
+});
 
+const selectedOrigins = Array.from(document.getElementById('origin').selectedOptions).map(function(opt) {
+  return opt.value;
+});
     await addDoc(collection(db, "submissions"), {
       fullName: document.getElementById('fullName').value,
       preferredName: document.getElementById('preferredName').value,
@@ -27,7 +31,7 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
       origin: selectedOrigins,
       howHeard: document.getElementById('howHeard').value || "",
       articleTitle: document.getElementById('articleTitle').value,
-      articleLink: document.getElementById('articleLink').value, // Saved directly to Firestore
+      articleLink: document.getElementById('articleLink').value, 
       articleText: document.getElementById('article').value || "",
       topics: selectedTopics,
       submittedAt: new Date()
@@ -36,8 +40,9 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
     alert("Article submitted successfully!");
     document.getElementById('submissionForm').reset();
 
-  } catch (error) {
-    console.error("Error submitting form: ", error);
-    alert("Error submitting article: " + error.message);
-  }
+  }} catch (error) {
+  console.log(error);
+  alert("Something went wrong");
+}
+
 });
