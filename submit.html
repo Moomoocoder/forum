@@ -95,7 +95,15 @@
                     <span>*</span>
                 </label>
 
-                <select id="currentCountry" name="currentCountry" required>
+               
+            </div>
+<!-- ORIGIN DROPDOWN -->
+<div class="question">
+    <label for="origin">
+        Which country(ies) are you from? <span>*</span>
+    </label>
+
+     <select id="currentCountry" name="currentCountry" required>
                     <option value="">Select a country</option>
 
                     <option>Afghanistan</option>
@@ -141,8 +149,22 @@
                     <option>Other</option>
 
                 </select>
-            </div>
+    <p class="description">
+        Hold Ctrl (Windows) or Command (Mac) to select multiple countries.
+    </p>
+</div>
 
+<div class="question">
+    <label for="articleFile">
+        Upload Article (PDF/Word) <span>*</span>
+    </label>
+    <input 
+        type="file" 
+        id="articleFile" 
+        name="articleFile"
+        accept=".pdf,.doc,.docx"
+    >
+</div>
 
             <!-- ORIGIN (Drop down list with search bar for country TBD  -->
 
