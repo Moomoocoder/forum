@@ -25,14 +25,14 @@ document.getElementById('submissionForm').addEventListener('submit', async (e) =
 
     await addDoc(collection(db, "submissions"), {
       fullName: document.getElementById('fullName').value,
-      preferredName: document.getElementById('preferredName').value,
+      preferredName: document.getElementById('preferred').value,
       school: document.getElementById('school').value || "",
       grade: document.getElementById('grade').value,
       currentCountry: document.getElementById('currentCountry').value,
       origin: selectedOrigins,
       howHeard: document.getElementById('howHeard').value || "",
-      articleTitle: document.getElementById('articleTitle').value,
-      articleLink: document.getElementById('articleLink').value, 
+      articleTitle: document.getElementById('Title').value,
+      articleLink: document.getElementById('Link').value, 
       articleText: document.getElementById('article').value || "",
       topics: selectedTopics,
       submittedAt: new Date()
